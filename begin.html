@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>1.Chuẩn bị</title>
+</head>
+<body>
+<div id='content'>
+<h2 style='text-align: center'>TRẮC NGHIỆM TIẾNG ANH <br>DÀNH CHO HỌC SINH TIỂU HỌC </h2>
+<hr>
+<a id='vung1' class='nut'>1.CHUẨN BỊ</a><a id='vung2' class='nut'>2.LÀM BÀI</a><a id='vung3' class='nut'>3.KẾT QUẢ</a>
+
+<div id='begin' >
+<table id='bang'>
+<tr>
+<td>Họ và tên:</td>
+<td><input type=text id='ten' placeholder="Nhập tên..." onblur="xulyten()"></td>
+</tr>
+<tr>
+<td>Lớp:</td>
+<td><input type=text id='lop' placeholder="Nhập lớp..." onblur='xulylop();'></td>
+</tr>
+<tr>
+<td>giới tính:</td>
+<td style='text-align:justify'>
+	<input type='radio' name='gt'  value='Nam'>Nam
+	<input type='radio' name='gt'  value='Nữ'>Nữ
+</td>
+</tr>
+
+<tr>
+	<td>Phương án kiểm tra:</td>
+	<td> <select id='phuongan'>
+	<option >--Vui lòng chọn--</option>
+	<option value='pa1'>Phương án 1</option>
+	<option value='pa2'>Phương án 2</option>
+	<option value='pa3'>Phương án 3</option>
+	</select></td>
+</tr>
+<tr>
+<td colspan='2'><p id='thongbao' style='color:red; font-size:18; font-style:italic;visibility:hidden;'>Bạn phải hoàn thiện đầy đủ các nội dung!!!</p></td></tr>
+</table>
+<p id='chuy'>
+Trong đó: <br>#Phương án 1:Trả lời từng câu hỏi một, mỗi câu có thời gian 20s, nếu đúng cộng 1 điểm, nếu sai thì dừng.<br>
+#Phương án 2: Trả lời một lần 15 câu hỏi trong 5 phút mỗi câu nếu đúng cộng 1 điểm, nếu sai không trừ điểm.<br>
+#Phương án 3: Trả lời câu hỏi liên tục trong 2 phút, mỗi câu nếu đúng cộng 1 điểm, sai trừ 1 điểm</p>
+<a href='' id='link'><input type='button' id='batdau' value='bắt đầu' onclick='return batdau();'/></a>
+</div>
+</div>
+<input type=button value='Thiết lập SBD' onclick='thietlap()' style='background-color:red;cursor:pointer'>
+<link rel='stylesheet' href='begin_style.css' type='text/css'>
+<script language='javascript'>
+function thietlap()
+{
+	localStorage.setItem('now', 0);
+	localStorage.setItem('now2', 0);
+	localStorage.setItem('now3', 0);
+}
+var ten=document.getElementById("ten");
+var lop=document.getElementById("lop");
+var gtinh=document.getElementsByName('gt');
+var phuongan=document.getElementById("phuongan");
+var thongbao=document.getElementById('thongbao');
+var nutbatdau=document.getElementById('batdau');
+var thelink=document.getElementById('link');
+function thoaman()
+{
+	if(ten.value==""|lop.value==""|phuongan.value=="--Vui lòng chọn--"|gtinh.value==''|!(gtinh[0].checked|gtinh[1].checked))
+	{
+		return false;
+		}
+	else{
+		return true;
+	}
+}
+function sex()
+{
+	if(gtinh[0].checked)
+	{
+		return gtinh[0].value;
+	}
+	if(gtinh[1].checked)
+	{
+		return gtinh[1].value;
+	}
+}
+
+function xulylop()
+{
+	var string=lop.value;
+	lop.value= string[0].toUpperCase() + string.slice(1);
+}
+function xulyten()
+{
+	var chuoi=ten.value;
+	var str='';
+	str=str+chuoi[0].toUpperCase();
+	for(i=1;i<chuoi.length;i++)
+	{
+		if(chuoi[i]==' '&&chuoi[i+1]!=undefined&&chuoi[i+1]!=' ')
+		{
+			str=str+' ' +chuoi[i+1].toUpperCase();
+			i++;
+		}else
+		{
+			str=str+chuoi[i]
+		}
+		ten.value=str;
+	}
+}
+function thietlapbien1()
+{
+	sbd=parseInt(localStorage.getItem('now'));
+	localStorage.setItem('now', sbd+1);
+	sbd++;
+	var sten=[];
+	var slop=[];
+	var sgt=[];
+	sten[sbd]='ten'+sbd;
+	slop[sbd]='lop'+sbd;
+	sgt[sbd]='gt'+sbd;
+	localStorage.setItem(sten[sbd],ten.value);
+	localStorage.setItem(slop[sbd],lop.value);
+	localStorage.setItem(sgt[sbd],sex())	
+}
+function thietlapbien2()
+{
+	sbd=parseInt(localStorage.getItem('now2'));
+	localStorage.setItem('now2', sbd+1);
+	sbd++;
+	var sten=[];
+	var slop=[];
+	var sgt=[];
+	sten[sbd]='ten2'+sbd;
+	slop[sbd]='lop2'+sbd;
+	sgt[sbd]='gt2'+sbd;
+	localStorage.setItem(sten[sbd],ten.value);
+	localStorage.setItem(slop[sbd],lop.value);
+	localStorage.setItem(sgt[sbd],sex())	
+}
+function thietlapbien3()
+{
+	sbd=parseInt(localStorage.getItem('now3'));
+	localStorage.setItem('now3', sbd+1);
+	sbd++;
+	var sten=[];
+	var slop=[];
+	var sgt=[];
+	sten[sbd]='ten3'+sbd;
+	slop[sbd]='lop3'+sbd;
+	sgt[sbd]='gt3'+sbd;
+	localStorage.setItem(sten[sbd],ten.value);
+	localStorage.setItem(slop[sbd],lop.value);
+	localStorage.setItem(sgt[sbd],sex())	
+}
+function chonpa()
+{
+	if(phuongan.value=='pa1')
+	{
+		thelink.href='pa1.html';
+		thietlapbien1();
+	}
+		if(phuongan.value=='pa2')
+	{
+		thelink.href='pa2.html';
+		thietlapbien2();
+	}
+		if(phuongan.value=='pa3')
+	{
+		thelink.href='pa3.html';
+		thietlapbien3();
+	}
+}
+
+function batdau()
+{
+	if(thoaman())
+	{
+		chonpa();
+		return true;
+	}
+	else
+	{
+		thongbao.style.visibility='';
+		return false;
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+#content{
+	border-style: double;
+    margin: auto;
+    width: 600;
+    height: 600;
+    background-color: #d5efa2;;
+}
+.nut{
+	margin: 3px;
+	text-decoration: none;
+    background-color: #8BC34A;
+    display: inline-block;
+    padding: 12 55;
+}
+#vung3
+{
+	background-color:red;
+}
+
+#kqua
+{
+	width: 600;
+    height: 400;
+	
+}
+#diem
+{
+	padding-left: 18px;
+    text-align: center;
+    font-size: 21;
+    width: 582px;
+    height: 300;
+}
+#thexh
+{
+	display:none;
+    padding-right: 13px;
+    padding-top: 25;
+    width: 577px;
+    height: 400;
+    padding-left: 11px;
+}
+#nutxh
+{
+    padding: 5 10;
+    text-align: center;
+}
+#table{
+    margin-left: 20px;
+    margin-bottom: 25px;
+	padding:10;
+	border:1px solid black;
+	border-collapse:collapse;
+	}
+table{
+	text-align:center;
+    margin-bottom: 25px;
+	padding:5;
+	border:1px solid black;
+	border-collapse:collapse;
+	}
+td{
+	padding:3;
+	border:1px solid black;
+	height:30;
+	}
+th{
+	padding:10;
+	border:1px solid black;
+	height:30;
+	}
+.thoigian
+{
+	text-align:center;
+	color: blue;
+}
+.thutu{
+	text-align:center;
+	}
+.ten
+{
+	text-align: center;
+    color: blue;
+	width:165;
+}
+.lop
+{
+	text-align: center;
+    color: blue;
+	width: 100;
+}
+.diem
+{
+	text-align: center;
+    color: blue;
+	width: 50;
+}
+.xephang
+{
+	text-align: center;
+    color: blue;
+	width: 70;
+}
+.sbd
+{
+	text-align: center;
+    color: blue;
+	width: 70;
+}
+#nutve
+{
+	margin-left: 223px;
+    left: 340;
+    top: 300;
+    padding: 5 10;
+    text-align: center;
+}
+#nutve1
+{
+    padding: 5 10;
+    text-align: center;
+}

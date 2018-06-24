@@ -1,0 +1,71 @@
+#content{
+	border-style: double;
+    margin: auto;
+    width: 600;
+    height: 600;
+    background-color: #d5efa2;;
+}
+.nut{
+	margin: 3px;
+	text-decoration: none;
+
+    display: inline-block;
+    padding: 12 55;
+}
+#vung1
+{
+	background-color:#F44336;;
+}
+#vung2
+{
+	background-color:#8BC34A;
+}
+#vung3
+{
+	background-color:#8BC34A;
+}
+
+
+#ten
+{
+	margin:5;
+	padding:5;
+}
+#lop
+{
+	margin:5;
+	padding:5;
+}
+
+.gioitinh{
+	margin: 5;
+    padding: 5
+}
+#phuongan
+{
+	padding:5;
+	margin:5;
+}
+#chuy{
+	padding:5 5;
+	border: 1px solid ;
+    color: blue;
+	font-style: italic;
+    text-align: justify;
+    margin-right: 10;
+    margin-left: 15;
+}
+#batdau
+{
+	cursor:pointer;
+    padding: 5 10;
+    text-align: center;
+}
+#link
+{
+	margin-left:500;
+}
+#bang
+{
+	    margin-left: 124px;
+}

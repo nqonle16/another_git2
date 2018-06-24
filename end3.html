@@ -1,0 +1,250 @@
+<html>
+<head>
+<title>3.Kết quả</title>
+</head>
+<body>
+<div id='content'>
+<h2 style='text-align: center'>TRẮC NGHIỆM TIẾNG ANH <br>DÀNH CHO HỌC SINH TIỂU HỌC </h2>
+<hr>
+<a id='vung1' class='nut'>1.CHUẨN BỊ</a><a id='vung2' class='nut'>2.LÀM BÀI</a><a id='vung3' class='nut'>3.KẾT QUẢ</a>
+<div id='kqua'>
+<div id='diem'>
+<h2 STYLE='text-align:center;'>KẾT QUẢ CỦA BẠN</h2>
+
+<table >
+	<tr>
+	<td>Họ và tên:</td>
+	<td class='ten' id='oten'></td>
+	</tr>
+	<tr>
+	<td>SBD:</td>
+	<td class='sbd' id='osbd'></td>
+	</tr>
+	<tr>
+	<td>Lớp:</td>
+	<td class='lop' id='olop'></td>
+	</tr>
+	<tr>
+	<td>Số câu đúng:</td>
+	<td id='ocaudung' class='ds'></td>
+	</tr>
+	<tr>
+	<td >Số câu sai:</td>
+	<td id='ocausai'class='ds'></td>
+	</tr>
+	<tr>
+	<td>Điểm:</td>
+	<td class='diem' id='odiem'></td>
+	</tr>
+	<tr>	
+	<td>Xếp hạng:</td>	
+	<td class='xephang' id='oxephang'></td>
+	</tr>
+	</table>
+<input id='nutxh' type=button value='Bảng xếp hạng' onclick='xephang()'>
+<a href='begin.html'><input id='nutve1' type='button' value='Về trang chủ'></a>
+</div>
+<div id='thexh'>
+<h2 STYLE='text-align:center;'>BẢNG XẾP HẠNG</h2>
+<table id='table' >
+	<tr>
+	<th>Thứ tự</td>
+	<th>Xếp hạng</th>
+	<th>SBD</th>
+	<th>Họ và tên</th>
+	<th>Lớp</th>
+	<th>Điểm</th>
+	</tr>
+	<tr>
+	<td class='thutu'>1</td>
+	<td class='xephang'></td>
+	<td class='sbd'></td>
+	<td class='ten'></td>
+	<td class='lop'></td>
+	<td class='diem'></td>
+	
+	</tr>
+	<td class='thutu'>2</td>
+	<td class='xephang'></td>
+	<td class='sbd'></td>
+	<td class='ten'></td>
+	<td class='lop'></td>
+	<td class='diem'></td>
+	 
+	</tr>
+	<td class='thutu'>3</td>
+	<td class='xephang'></td>
+	<td class='sbd'></td>
+	<td class='ten'></td>
+	<td class='lop'></td>
+	<td class='diem'></td>
+	 
+	</tr>
+	<td class='thutu'>4</td>
+	<td class='xephang'></td>
+	<td class='sbd'></td>
+	<td class='ten'></td>
+	<td class='lop'></td>
+	<td class='diem'></td>
+	 
+	</tr>
+	<td class='thutu'>5</td>
+	<td class='xephang'></td>
+	<td class='sbd'></td>
+	<td class='ten'></td>
+	<td class='lop'></td>
+	<td class='diem'></td>
+	 
+	</tr>
+	</table>
+
+<a href='begin.html'><input id='nutve' type='button' value='Về trang chủ'></a>
+
+
+</div>
+</div>
+<link rel='stylesheet' href='end3.css' type='text/css'>
+<script language='javascript'>
+var nutxh=document.getElementById('nutxh');
+
+sbd=parseInt(localStorage.getItem('now3'));
+
+var ssbd=[];
+var sten=[];
+var slop=[];
+var sdiem=[];
+var scaudung=[];
+var scausai=[];
+
+var ten=[];
+var lop=[];
+var diem=[];
+var caudung=[];
+var causai=[];
+var hang=[];
+var hangnow=1;
+var ohang=document.getElementsByClassName('xephang');
+var oten=document.getElementsByClassName('ten');
+var olop=document.getElementsByClassName('lop');
+var odiem=document.getElementsByClassName('diem');
+var osbd=document.getElementsByClassName('sbd');
+var ocausai=document.getElementsByClassName('causai');
+var ocaudung=document.getElementsByClassName('caudung');
+
+function hsbd(x)
+{if(x<10)
+{return '00'+x;}
+else if(x<99)
+{return '0'+x}
+else{return x}}
+
+for (i=1;i<=sbd;i++)
+{
+	sten[i]='ten3'+i;
+	ten[i]=localStorage.getItem(sten[i]);
+	slop[i]='lop3'+i;
+	lop[i]=localStorage.getItem(slop[i]);
+	sdiem[i]='diem3'+i;
+	diem[i]=localStorage.getItem(sdiem[i]);
+	scaudung[i]='caudung'+i;
+	caudung[i]=localStorage.getItem(scaudung[i]);
+	scausai[i]='causai'+i;
+	causai[i]=localStorage.getItem(scausai[i]);	
+	ssbd[i]=i;
+}
+var sbdnow=sbd;
+for(i=1;i<=diem.length;i++)
+	{
+		for(j=1;j<=diem.length;j++)
+		{
+			if(diem[i]>diem[j])
+			{
+				tam=diem[i];
+				diem[i]=diem[j];
+				diem[j]=tam;
+				
+				tam=ten[i];
+				ten[i]=ten[j];
+				ten[j]=tam;
+				
+				tam=lop[i];
+				lop[i]=lop[j];
+				lop[j]=tam;
+				
+				tam=ssbd[i];
+				ssbd[i]=ssbd[j];
+				ssbd[j]=tam;
+				
+				tam=caudung[i];
+				caudung[i]=caudung[j];
+				caudung[j]=tam;
+				
+				tam=causai[i];
+				causai[i]=causai[j];
+				causai[j]=tam;
+			}
+		}
+	}
+hang[1]=1;
+
+for(i=2;i<=sbd;i++)
+{
+	if(diem[i]==diem[i-1])
+	{
+		hang[i]=hang[i-1]
+	}else
+	{
+		hang[i]=hang[i-1]+1;
+	}
+}
+if(sbd<=5)
+{
+	for(j=1;j<=sbd;j++)
+	{
+		ohang[j].innerHTML=hang[j];
+		odiem[j].innerHTML=diem[j];
+		oten[j].innerHTML=ten[j];
+		olop[j].innerHTML=lop[j];
+		osbd[j].innerHTML=hsbd(ssbd[j]);
+	}
+}
+else
+{
+	for(j=1;j<=sbd;j++)
+	{
+		ohang[j].innerHTML=hang[j];
+		odiem[j].innerHTML=diem[j];
+		oten[j].innerHTML=ten[j];
+		olop[j].innerHTML=lop[j];
+		osbd[j].innerHTML=hsbd(ssbd[j]);
+	}
+}
+for(i=1;i<=sbd;i++)
+{
+	if(ssbd[i]==sbdnow)
+	{
+	document.getElementById('oten').innerHTML=ten[i];
+	document.getElementById('olop').innerHTML=lop[i];
+	document.getElementById('odiem').innerHTML=diem[i];
+	document.getElementById('osbd').innerHTML=hsbd(ssbd[i]);
+	document.getElementById('oxephang').innerHTML=hang[i];
+	document.getElementById('ocaudung').innerHTML=caudung[i];
+	document.getElementById('ocausai').innerHTML=causai[i];
+	}
+}
+function xephang()
+{
+	document.getElementById('diem').style.display='none';
+	document.getElementById('thexh').style.display='block';
+
+}
+
+
+nutxh.onclick=function()
+{
+document.getElementById('diem').style.display='none'
+document.getElementById('thexh').style.display='block'
+}
+</script>
+
+</body>

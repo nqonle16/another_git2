@@ -1,0 +1,91 @@
+#content{
+	border-style: double;
+    margin: auto;
+    width: 600;
+    height: 600;
+    background-color: #d5efa2;;
+}
+#kqua
+{
+	display:none;
+	text-align: center;
+    font-size: 40;
+    padding-top: 211px;
+}
+
+
+#cauhoi{
+	font-family:arial;
+	font-style:bold;
+	font-size:22;
+	padding:10;
+    border: solid 1px blue;
+    width: 570;
+    height: 84px;
+}
+#traloi{
+	 margin: 5;
+    padding: 5;
+}
+
+#xacnhan
+{
+	margin-left: 250;
+    padding: 5 10;
+    text-align: center;
+}
+
+#xemkq
+{
+	    margin-right: 177px;
+    display: none;
+    padding: 5;
+    margin-top: 43px;
+}
+#ketqua
+{
+	    font-family: arial;
+    font-size: 22px;
+    text-align: center;
+    display: inline;
+    color: red;
+}
+#nutxemkq
+{
+	cursor:poiter;
+	padding:5;
+}
+.nut{
+	margin: 3px;
+	text-decoration: none;
+    background-color: #8BC34A;
+    display: inline-block;
+    padding: 12 55;
+}
+#nutbatdau
+{
+	margin-left: 250;
+    padding: 5 10;
+    text-align: center;
+}
+#vung2
+{
+	background-color:red;
+}
+#xinchao
+{
+	padding: 10;
+    height: 30;
+    color: blue;
+    font-size: 23px;
+	height:30;
+}
+#tieude
+{	
+	margin-top:0px;
+	margin-right:10px;
+	height:0;
+	text-align:right;
+	font-size:19;
+	color:blue;
+}

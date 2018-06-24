@@ -1,0 +1,95 @@
+#content{
+	border-style: double;
+    margin: auto;
+    width: 600;
+	padding-bottom:20;
+    background-color: #d5efa2;;
+}
+.cauhoi{
+	font-family:arial;
+	font-size:18;
+	padding:10;
+	color:blue;
+}
+#xemkq
+{
+	margin-left:178;
+	padding:5;
+}
+#nutxemkq
+{
+	background-color:red;
+	cursor:pointer;
+	padding:5;
+}
+.nut{
+	margin: 3px;
+	text-decoration: none;
+    background-color: #8BC34A;
+    display: inline-block;
+    padding: 12 55;
+}
+#nutbatdau
+{
+	margin-left: 250;
+    padding: 5 10;
+    text-align: center;
+}
+#vung2
+{
+	background-color:red;
+}
+#xinchao
+{
+	padding: 10;
+    height: 30;
+    color: blue;
+    font-size: 23px;
+	height:30;
+
+}
+#tieude
+{	
+	margin-top:0;
+	margin-right:10px;
+	height:0;
+	text-align:right;
+	font-size:19;
+	color:blue;
+	display=none;
+}
+#bye
+{
+	height:140;
+	display:none;
+	padding: 10;
+    color: blue;
+    font-size: 23px;
+}
+#table{
+    margin-left: 420px;
+    margin-top: 10px;
+	}
+span{border: solid 1px #ACACAC; padding: 2px;}
+.chona
+{
+	margin-left:35;
+}
+.chonb
+{
+	margin-left:35;
+}
+.chonc
+{
+	margin-left:35;
+}
+.chond
+{
+	margin-left:35;
+}
+#hoanthanh
+{
+	margin-left: 250;
+    padding: 5 10;
+    text-align: center;
+}

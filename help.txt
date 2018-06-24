@@ -1,0 +1,3 @@
+1.chạy file TracNghiemTA.html hoặc begin.html để chạy bài thi;
+2. để reset kết quả: xóa lượt sử web;
+3. cre: ngonle16@gmail.com;
